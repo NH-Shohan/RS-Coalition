@@ -1,7 +1,8 @@
-import Button from "@/components/button";
 import Image from "next/image";
+import Link from "next/link";
 import arrow from "../../public/arrow.png";
 import rs_coalition from "../../public/rs-coalition.svg";
+import Button from "./button";
 
 const Hero = () => {
   return (
@@ -9,7 +10,7 @@ const Hero = () => {
       <Image
         src={rs_coalition}
         alt="RS Coalition"
-        className="px-4 w-full my-20 pointer-events-none"
+        className="px-4 w-full my-16 pointer-events-none"
       />
 
       <div className="container mx-auto text-center text-neutral-500 pointer-events-none">
@@ -20,8 +21,10 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="container mx-auto flex flex-col items-center mt-10">
-        <Button>Start Project</Button>
+      <div className="container mx-auto flex flex-col items-center mt-6">
+        <Button>
+          <Link href={""}>Start Project</Link>
+        </Button>
         <Image
           src={arrow}
           alt="Arrow Image"

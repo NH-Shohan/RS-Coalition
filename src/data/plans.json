@@ -1,0 +1,202 @@
+{
+  "UI/UXDesign": [
+    {
+      "type": "Basic",
+      "title": "Starter Spark",
+      "description": "Starter businesses, personal websites, portfolio or single landing page design",
+      "price": "2,000",
+      "features": [
+        "Custom layout design",
+        "Mobile-friendly, responsive design",
+        "Basic SEO setup",
+        "Up to 5 web pages",
+        "Essential website elements",
+        "Brand Guideline & Logo",
+        "Delivery within 1-2 weeks",
+        "Maximum 3 revisions"
+      ]
+    },
+    {
+      "type": "Standard",
+      "title": "Growth Glow",
+      "description": "Large businesses and enterprises needing high customization",
+      "price": "5,000",
+      "features": [
+        "Custom design & advanced UI/UX",
+        "Responsive design for all devices",
+        "Intermediate SEO",
+        "Up to 10 web pages",
+        "Basic integrations",
+        "Basic on-site optimization",
+        "Delivery within 2-3 weeks",
+        "Maximum 5 revisions"
+      ]
+    },
+    {
+      "type": "Premium",
+      "title": "Enterprise Edge",
+      "description": "Established businesses, e-commerce, or content-heavy sites",
+      "price": "8,500",
+      "features": [
+        "High-level customizations",
+        "Animations, and interactions",
+        "Fully responsive and optimized",
+        "Extensive SEO services",
+        "Up to 20+ web pages",
+        "Enhanced security & performance",
+        "Delivery within 4-6 weeks",
+        "Unlimited revisions"
+      ]
+    }
+  ],
+  "WebDevelopment": [
+    {
+      "type": "Basic",
+      "title": "Web Start",
+      "description": "Ideal for small businesses and personal projects needing a basic web presence",
+      "price": "3,000",
+      "features": [
+        "Custom website design",
+        "Responsive layout",
+        "Basic SEO setup",
+        "Up to 5 pages",
+        "Contact form integration",
+        "Basic security setup",
+        "Delivery within 1-2 weeks",
+        "Maximum 2 revisions"
+      ]
+    },
+    {
+      "type": "Standard",
+      "title": "Business Boost",
+      "description": "Perfect for growing businesses needing enhanced web functionality and design",
+      "price": "6,000",
+      "features": [
+        "Advanced web design & functionality",
+        "SEO-friendly structure",
+        "Mobile and tablet responsive",
+        "Up to 10 pages",
+        "Social media integration",
+        "E-commerce integration",
+        "Delivery within 2-3 weeks",
+        "Maximum 5 revisions"
+      ]
+    },
+    {
+      "type": "Premium",
+      "title": "Enterprise Suite",
+      "description": "Comprehensive package for enterprises needing a highly customized and scalable website",
+      "price": "9,000",
+      "features": [
+        "Bespoke web design & development",
+        "E-commerce & CMS integration",
+        "SEO and performance optimization",
+        "Unlimited pages",
+        "Custom integrations (APIs, plugins)",
+        "Enhanced security features",
+        "Delivery within 4-6 weeks",
+        "Unlimited revisions"
+      ]
+    }
+  ],
+  "AppDevelopment": [
+    {
+      "type": "Basic",
+      "title": "App Lite",
+      "description": "Basic app solution for startups or MVPs focusing on core functionalities",
+      "price": "4,000",
+      "features": [
+        "Cross-platform development",
+        "Basic UI/UX design",
+        "Essential app features",
+        "Up to 3 screens",
+        "API integration",
+        "Basic analytics setup",
+        "Delivery within 2-3 weeks",
+        "Maximum 3 revisions"
+      ]
+    },
+    {
+      "type": "Standard",
+      "title": "App Pro",
+      "description": "Ideal for businesses needing custom app functionalities and a professional design",
+      "price": "7,000",
+      "features": [
+        "Custom UI/UX design",
+        "Advanced functionality",
+        "Up to 10 screens",
+        "Push notifications",
+        "User authentication",
+        "Performance optimization",
+        "Delivery within 4-5 weeks",
+        "Maximum 5 revisions"
+      ]
+    },
+    {
+      "type": "Premium",
+      "title": "Enterprise App",
+      "description": "High-end app solution for enterprises, fully scalable and secure",
+      "price": "10,000",
+      "features": [
+        "Custom design and animations",
+        "Enterprise-grade functionality",
+        "Unlimited screens",
+        "Advanced integrations (CRM, ERP, etc.)",
+        "Data encryption & security",
+        "Advanced analytics and reporting",
+        "Delivery within 6-8 weeks",
+        "Unlimited revisions"
+      ]
+    }
+  ],
+  "Telesales": [
+    {
+      "type": "Basic",
+      "title": "Lead Connect",
+      "description": "Focused on lead generation and customer outreach for small businesses",
+      "price": "1,500",
+      "features": [
+        "Outbound calls",
+        "Lead qualification",
+        "Basic CRM management",
+        "Weekly reporting",
+        "Up to 100 calls/day",
+        "Basic customer feedback collection",
+        "Delivery within 1-2 weeks",
+        "Maximum 1 revision"
+      ]
+    },
+    {
+      "type": "Standard",
+      "title": "Growth Outreach",
+      "description": "Optimized telesales for mid-sized companies with higher lead targets",
+      "price": "3,000",
+      "features": [
+        "Dedicated sales representative",
+        "Lead nurturing",
+        "CRM integration",
+        "Bi-weekly reporting",
+        "Up to 300 calls/day",
+        "Script optimization",
+        "Delivery within 2-4 weeks",
+        "Maximum 3 revisions"
+      ]
+    },
+    {
+      "type": "Premium",
+      "title": "Enterprise Connect",
+      "description": "Comprehensive telesales solution for enterprises focusing on customer acquisition",
+      "price": "5,000",
+      "features": [
+        "Dedicated sales team",
+        "Advanced CRM integration",
+        "Data-driven sales strategy",
+        "Real-time reporting",
+        "Unlimited calls",
+        "Customer retention programs",
+        "Delivery within 4-6 weeks",
+        "Unlimited revisions"
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: visible;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   background-image: url("/noise.png");
+  overflow: visible;
 }
 
 h1 {
@@ -60,13 +62,13 @@ h4 {
 .animate-scroll-left {
   display: flex;
   width: max-content;
-  animation: scroll-left 260s linear infinite;
+  animation: scroll-left 350s linear infinite;
 }
 
 .animate-scroll-right {
   display: flex;
   width: max-content;
-  animation: scroll-right 260s linear infinite;
+  animation: scroll-right 350s linear infinite;
 }
 
 @layer utilities {
@@ -86,5 +88,11 @@ h4 {
   .font-outline {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 4px;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }

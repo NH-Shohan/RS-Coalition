@@ -13,22 +13,22 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="flex justify-center border-y-2 border-neutral-600">
+      <div className="flex justify-center border-y-2 border-neutral-600 sticky top-0">
         <Link
           className="border-r-2 border-neutral-600 px-7 py-3 hover:bg-gradient-to-r from-blue-600 to-purple-600 inline-block hover:text-transparent bg-clip-text transition-all"
-          href={"#"}
+          href={"#about"}
         >
           About
         </Link>
         <Link
           className="border-r-2 border-neutral-600 px-7 py-3 hover:bg-gradient-to-r from-blue-600 to-purple-600 inline-block hover:text-transparent bg-clip-text transition-all"
-          href={"#"}
+          href={"#services"}
         >
           Services
         </Link>
         <Link
           className="border-r-2 border-neutral-600 px-7 py-3 hover:bg-gradient-to-r from-blue-600 to-purple-600 inline-block hover:text-transparent bg-clip-text transition-all"
-          href={"#"}
+          href={"#plans"}
         >
           Pricing
         </Link>
