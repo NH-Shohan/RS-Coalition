@@ -3,7 +3,7 @@
 import plansData from "@/data/plans.json";
 import { SealCheck } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import Button from "./button";
+import Button from "./ui/button";
 
 const Plans = () => {
   const [activeTab, setActiveTab] = useState("UI/UXDesign");
@@ -14,7 +14,7 @@ const Plans = () => {
   }, [activeTab]);
 
   return (
-    <div className="container mx-auto max-w-7xl mt-10" id="plans">
+    <div className="container mx-auto max-w-7xl" id="plans">
       <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
         PLANS
       </p>

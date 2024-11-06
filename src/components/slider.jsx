@@ -55,8 +55,8 @@ const Slider = () => {
   }, []);
 
   return (
-    <>
-      <div className="relative overflow-hidden py-5 border-y-2 border-neutral-700 mt-32">
+    <div>
+      <div className="relative overflow-hidden py-5 border-y-2 border-neutral-700">
         <div
           ref={leftScrollRef}
           className="flex whitespace-nowrap"
@@ -95,7 +95,7 @@ const Slider = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

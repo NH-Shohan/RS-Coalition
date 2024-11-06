@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import arrow from "../../public/arrow.png";
 import rs_coalition from "../../public/rs-coalition.svg";
-import Button from "./button";
+import Intro from "./intro";
+import Button from "./ui/button";
 
 const Hero = () => {
   return (
@@ -31,6 +32,8 @@ const Hero = () => {
           className="w-20 h-20 rotate-45 opacity-30 mt-4"
         />
       </div>
+
+      <Intro />
     </div>
   );
 };

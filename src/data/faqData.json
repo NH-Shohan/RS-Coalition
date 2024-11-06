@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What services does RS Coalition offer?",
+    "answer": "We offer comprehensive digital solutions, including website design, UI/UX design, web and app development, branding, and telesales services. Our goal is to help businesses establish a strong online presence and connect with their target audience effectively."
+  },
+  {
+    "question": "How does the pricing work for website design and development?",
+    "answer": "Our pricing is based on hourly rates, with several plan options tailored to different needs. Rates start from $20/hour for basic websites and go up to $60/hour for enterprise-level customizations. Each package includes different levels of design, functionality, and SEO, so you can choose the plan that best fits your requirements."
+  },
+  {
+    "question": "How long will it take to complete my website?",
+    "answer": "Timelines depend on the complexity of the project. Basic websites typically take 1-2 weeks, while more complex, feature-rich websites can take up to 4-6 weeks. We'll provide a clear timeline during our initial consultation."
+  },
+  {
+    "question": "Do you offer e-commerce website development?",
+    "answer": "Yes, we offer e-commerce setup as an add-on to our website design and development plans. This includes product listings, payment gateways, and cart functionality to create a seamless shopping experience for your customers."
+  },
+  {
+    "question": "Can I make updates to my website after it's launched?",
+    "answer": "Absolutely! We provide ongoing maintenance at $20/hour for updates, security checks, and backups. We can also teach you how to make basic updates if you prefer to handle them on your own."
+  },
+  {
+    "question": "What platforms do you use for web development?",
+    "answer": "We work with several platforms, including WordPress, Shopify, and custom-coded solutions, depending on your needs. We'll discuss the best platform options with you based on your goals and budget."
+  },
+  {
+    "question": "How does the design process work?",
+    "answer": "Our design process starts with an initial consultation to understand your vision and goals. We'll create wireframes and mockups for your approval before moving into full development. Throughout the process, we keep you updated and involved, ensuring the final product aligns with your expectations."
+  },
+  {
+    "question": "Do you provide SEO with website design?",
+    "answer": "Yes, each of our packages includes a level of SEO optimization, from basic metadata and keywords to more comprehensive SEO strategies for advanced packages. We aim to make your website not only visually appealing but also optimized for search engines."
+  },
+  {
+    "question": "What is the payment process?",
+    "answer": "We typically require an initial deposit to begin the project, with payments scheduled throughout based on project milestones. We'll discuss payment terms with you before we start so you're fully informed."
+  }
+]

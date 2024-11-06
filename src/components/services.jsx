@@ -3,7 +3,7 @@ import services from "@/data/services.json";
 const Services = () => {
   return (
     <div
-      className="container mx-auto max-w-7xl grid grid-cols-3 gap-6 border-t-2 border-neutral-700 mt-40 h-full"
+      className="container mx-auto max-w-7xl grid grid-cols-3 gap-6 border-t-2 border-neutral-700 h-full"
       id="services"
     >
       <div className="space-y-4 text-right col-span-1 p-7 sticky top-0 h-screen">
