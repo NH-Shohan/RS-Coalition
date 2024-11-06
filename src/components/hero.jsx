@@ -11,7 +11,7 @@ const Hero = () => {
       <Image
         src={rs_coalition}
         alt="RS Coalition"
-        className="px-4 w-full my-16 pointer-events-none"
+        className="px-4 w-full mb-16 -mt-16 pointer-events-none"
       />
 
       <div className="container mx-auto text-center text-neutral-500 pointer-events-none">

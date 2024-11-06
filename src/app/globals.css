@@ -41,34 +41,17 @@ h4 {
   line-height: 1.5rem;
 }
 
-@keyframes scroll-left {
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animate-scroll-left {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 350s linear infinite;
-}
-
-.animate-scroll-right {
-  display: flex;
-  width: max-content;
-  animation: scroll-right 350s linear infinite;
+.animate-scroll {
+  animation: scroll 60s linear infinite;
 }
 
 @layer utilities {

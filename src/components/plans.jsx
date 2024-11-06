@@ -20,7 +20,7 @@ const Plans = () => {
       </p>
       <h1 className="text-neutral-300">Choose Your Affordable Plan</h1>
 
-      <div className="flex justify-start border-y-2 border-neutral-700 mt-6">
+      <div className="flex justify-start border-y-2 border-neutral-700 mt-10">
         {["UI/UXDesign", "WebDevelopment", "AppDevelopment", "Telesales"].map(
           (tab) => (
             <button
@@ -41,7 +41,12 @@ const Plans = () => {
       {/* Plan Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3">
         {plans.map((plan, index) => (
-          <div key={index} className="p-6 border-r-2 border-neutral-700">
+          <div
+            key={index}
+            className={`p-6 border-r-2 border-neutral-700 ${
+              index === 2 && "border-r-0"
+            }`}
+          >
             <span className="bg-neutral-600 text-white py-1 px-3 rounded-full uppercase text-xs">
               {plan.type}
             </span>

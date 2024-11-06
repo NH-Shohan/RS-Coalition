@@ -3,10 +3,10 @@ import services from "@/data/services.json";
 const Services = () => {
   return (
     <div
-      className="container mx-auto max-w-7xl grid grid-cols-3 gap-6 border-t-2 border-neutral-700 h-full"
+      className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 border-t-2 border-neutral-700 h-full"
       id="services"
     >
-      <div className="space-y-4 text-right col-span-1 p-7 sticky top-0 h-screen">
+      <div className="space-y-4 text-right col-span-1 p-7 md:sticky top-0 md:h-screen">
         <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
           SERVICES
         </p>
