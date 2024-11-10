@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Button from "./ui/button";
 
 const Plans = () => {
-  const [activeTab, setActiveTab] = useState("UI/UXDesign");
+  const [activeTab, setActiveTab] = useState("Telesales");
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
@@ -14,28 +14,31 @@ const Plans = () => {
   }, [activeTab]);
 
   return (
-    <div className="container mx-auto max-w-7xl" id="plans">
+    <div className="container mx-auto max-w-7xl pt-40" id="plans">
       <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
         PLANS
       </p>
       <h1 className="text-neutral-300">Choose Your Affordable Plan</h1>
 
       <div className="flex justify-start border-y-2 border-neutral-700 mt-10">
-        {["UI/UXDesign", "WebDevelopment", "AppDevelopment", "Telesales"].map(
-          (tab) => (
-            <button
-              key={tab}
-              className={`py-3 hover:text-blue-600 transition-all border-r-2 border-neutral-700 px-5 ${
-                activeTab === tab
-                  ? "bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none"
-                  : "text-neutral-500"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab.replace(/([A-Z])/g, " $1").trim()}
-            </button>
-          )
-        )}
+        {[
+          "Telesales",
+          "UI/UX Design",
+          "Web Development",
+          "App Development",
+        ].map((tab) => (
+          <button
+            key={tab}
+            className={`py-3 hover:text-blue-600 transition-all border-r-2 border-neutral-700 px-5 ${
+              activeTab === tab
+                ? "bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none"
+                : "text-neutral-500"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
       </div>
 
       {/* Plan Cards */}
@@ -44,7 +47,7 @@ const Plans = () => {
           <div
             key={index}
             className={`p-6 border-r-2 border-neutral-700 ${
-              index === 2 && "border-r-0"
+              index === 2 && "border-r-0 border-opacity-0"
             }`}
           >
             <span className="bg-neutral-600 text-white py-1 px-3 rounded-full uppercase text-xs">
@@ -53,10 +56,12 @@ const Plans = () => {
             <h4 className="mt-4">{plan.title}</h4>
             <p className="text-neutral-500 mt-2">{plan.description}</p>
 
-            <h2 className="text-white mt-4">
-              Tk {plan.price}
-              <span className="text-neutral-500 text-lg">/hour</span>
-            </h2>
+            {plan.price && (
+              <h2 className="text-white mt-4">
+                Tk {plan.price}
+                <span className="text-neutral-500 text-lg">/hour</span>
+              </h2>
+            )}
 
             <div className="border-t-2 border-neutral-700 mt-4 pt-4">
               <p className="font-semibold text-neutral-400">

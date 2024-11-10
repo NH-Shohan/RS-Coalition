@@ -55,7 +55,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mt-40">
       <div className="relative overflow-hidden py-5 border-y-2 border-neutral-700">
         <div
           ref={leftScrollRef}

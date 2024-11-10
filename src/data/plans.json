@@ -1,5 +1,52 @@
 {
-  "UI/UXDesign": [
+  "Telesales": [
+    {
+      "type": "Basic",
+      "title": "Lead Connect",
+      "description": "Focused on lead generation and customer outreach for small businesses",
+      "features": [
+        "Outbound calls",
+        "Lead qualification",
+        "Basic CRM management",
+        "Weekly reporting",
+        "Up to 100 calls/day",
+        "Basic customer feedback collection",
+        "Delivery within 1-2 weeks",
+        "Maximum 1 revision"
+      ]
+    },
+    {
+      "type": "Standard",
+      "title": "Growth Outreach",
+      "description": "Optimized telesales for mid-sized companies with higher lead targets",
+      "features": [
+        "Dedicated sales representative",
+        "Lead nurturing",
+        "CRM integration",
+        "Bi-weekly reporting",
+        "Up to 300 calls/day",
+        "Script optimization",
+        "Delivery within 2-4 weeks",
+        "Maximum 3 revisions"
+      ]
+    },
+    {
+      "type": "Premium",
+      "title": "Enterprise Connect",
+      "description": "Comprehensive telesales solution for enterprises focusing on customer acquisition",
+      "features": [
+        "Dedicated sales team",
+        "Advanced CRM integration",
+        "Data-driven sales strategy",
+        "Real-time reporting",
+        "Unlimited calls",
+        "Customer retention programs",
+        "Delivery within 4-6 weeks",
+        "Unlimited revisions"
+      ]
+    }
+  ],
+  "UI/UX Design": [
     {
       "type": "Basic",
       "title": "Starter Spark",
@@ -49,7 +96,7 @@
       ]
     }
   ],
-  "WebDevelopment": [
+  "Web Development": [
     {
       "type": "Basic",
       "title": "Web Start",
@@ -99,7 +146,7 @@
       ]
     }
   ],
-  "AppDevelopment": [
+  "App Development": [
     {
       "type": "Basic",
       "title": "App Lite",
@@ -145,56 +192,6 @@
         "Data encryption & security",
         "Advanced analytics and reporting",
         "Delivery within 6-8 weeks",
-        "Unlimited revisions"
-      ]
-    }
-  ],
-  "Telesales": [
-    {
-      "type": "Basic",
-      "title": "Lead Connect",
-      "description": "Focused on lead generation and customer outreach for small businesses",
-      "price": "1,500",
-      "features": [
-        "Outbound calls",
-        "Lead qualification",
-        "Basic CRM management",
-        "Weekly reporting",
-        "Up to 100 calls/day",
-        "Basic customer feedback collection",
-        "Delivery within 1-2 weeks",
-        "Maximum 1 revision"
-      ]
-    },
-    {
-      "type": "Standard",
-      "title": "Growth Outreach",
-      "description": "Optimized telesales for mid-sized companies with higher lead targets",
-      "price": "3,000",
-      "features": [
-        "Dedicated sales representative",
-        "Lead nurturing",
-        "CRM integration",
-        "Bi-weekly reporting",
-        "Up to 300 calls/day",
-        "Script optimization",
-        "Delivery within 2-4 weeks",
-        "Maximum 3 revisions"
-      ]
-    },
-    {
-      "type": "Premium",
-      "title": "Enterprise Connect",
-      "description": "Comprehensive telesales solution for enterprises focusing on customer acquisition",
-      "price": "5,000",
-      "features": [
-        "Dedicated sales team",
-        "Advanced CRM integration",
-        "Data-driven sales strategy",
-        "Real-time reporting",
-        "Unlimited calls",
-        "Customer retention programs",
-        "Delivery within 4-6 weeks",
         "Unlimited revisions"
       ]
     }

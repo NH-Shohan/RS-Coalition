@@ -33,7 +33,7 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div>
+    <div className="pt-40">
       <div className="container mx-auto max-w-7xl">
         <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
           REVIEW
@@ -56,12 +56,12 @@ const Reviews = () => {
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} weight="fill" />
+                  <Star key={i} size={20} weight="fill" />
                 ))}
               </div>
               <div>
                 <h4 className="text-neutral-200">{review.name}</h4>
-                <p>{review.role}</p>
+                <p className="text-neutral-400">{review.role}</p>
               </div>
               <p className="text-wrap">{review.review}</p>
             </div>

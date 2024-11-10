@@ -8,7 +8,7 @@ import {
 
 const FAQSection = () => {
   return (
-    <section className="container mx-auto max-w-7xl">
+    <section className="container mx-auto max-w-7xl pt-40">
       <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
         FAQ
       </p>
@@ -27,7 +27,7 @@ const FAQSection = () => {
             key={index}
             value={`item-${index}`}
             className={`border-neutral-700 p-6 text-neutral-300 transition-all duration-200 ${
-              [0, 1, 3, 4, 6, 7].includes(index) && "border-b border-r"
+              [0, 1, 3, 4, 6, 7].includes(index) && "border-b-2 border-r-2"
             }`}
           >
             <AccordionTrigger className="text-lg font-semibold hover:text-blue-500">

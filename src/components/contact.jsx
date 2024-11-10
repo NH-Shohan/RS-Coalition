@@ -5,17 +5,64 @@ import {
   InstagramLogo,
   LinkedinLogo,
   PhoneCall,
+  Spinner,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useState } from "react";
 import Button from "./ui/button";
 
 const ContactForm = () => {
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: "", message: "" });
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      source: formData.get("source"),
+      budget: formData.get("budget"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Message sent successfully!",
+        });
+        e.target.reset();
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="container mx-auto max-w-7xl" id="contact">
+    <div className="container mx-auto max-w-7xl pt-40" id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="space-y-10">
           <div>
@@ -52,7 +99,6 @@ const ContactForm = () => {
             </Link>
           </div>
 
-          {/* Address */}
           <div className="mb-8">
             <p className="text-neutral-500 mb-2">Address</p>
             <h5>
@@ -63,89 +109,115 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Form Section */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* First Row */}
+          {submitStatus.message && (
+            <div
+              className={`p-4 rounded ${
+                submitStatus.type === "success"
+                  ? "bg-green-500/10 text-green-500"
+                  : "bg-red-500/10 text-red-500"
+              }`}
+            >
+              {submitStatus.message}
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
             <div>
-              <label className="block text-sm mb-2 text-neutral-200">
+              <label className="block text-sm mb-2 text-neutral-500">
                 Full name <span className="text-blue-500">*</span>
               </label>
               <input
+                name="name"
                 type="text"
-                className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
                 placeholder="John Doe"
                 required
               />
             </div>
           </div>
 
-          {/* Second Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm mb-2 text-neutral-200">
+              <label className="block text-sm mb-2 text-neutral-500">
                 Email <span className="text-blue-500">*</span>
               </label>
               <input
+                name="email"
                 type="email"
-                className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
                 placeholder="johndoe@gmail.com"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm mb-2 text-neutral-200">
+              <label className="block text-sm mb-2 text-neutral-500">
                 Phone (optional)
               </label>
               <input
+                name="phone"
                 type="tel"
-                className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
                 placeholder="+8801234567890"
               />
             </div>
           </div>
 
-          {/* Third Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm mb-2 text-neutral-200">
+              <label className="block text-sm mb-2 text-neutral-500">
                 How did you hear about us?
               </label>
-              <select className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3">
+              <select
+                name="source"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+              >
                 <option value="">Choose any one</option>
-                <option value="social">Social Media</option>
-                <option value="referral">Referral</option>
-                <option value="search">Search Engine</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+                <option value="Search Engine">Search Engine</option>
               </select>
             </div>
             <div>
-              <label className="block text-sm mb-2 text-neutral-200">
+              <label className="block text-sm mb-2 text-neutral-500">
                 Project Budget
               </label>
-              <select className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3">
+              <select
+                name="budget"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+              >
                 <option value="">Select your range</option>
-                <option value="small">$100 - $500</option>
-                <option value="medium">$500 - $1000</option>
-                <option value="medium">$1000 - $3000</option>
-                <option value="large">$3000+</option>
+                <option value="$100 - $500">$100 - $500</option>
+                <option value="$500 - $1000">$500 - $1000</option>
+                <option value="$1000 - $3000">$1000 - $3000</option>
+                <option value="$3000+">$3000+</option>
               </select>
             </div>
           </div>
 
-          {/* Message Field */}
           <div>
-            <label className="block text-sm mb-2 text-neutral-200">
+            <label className="block text-sm mb-2 text-neutral-500">
               About project <span className="text-blue-500">*</span>
             </label>
             <textarea
-              className="w-full bg-transparent border-b border-neutral-700 focus:border-blue-500 outline-none px-0 py-3 min-h-[120px]"
+              name="message"
+              className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3 min-h-[120px]"
               placeholder="Your message here"
               required
             />
           </div>
 
           <div className="mt-8">
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <p className="flex gap-2">
+                  <Spinner size={24} className="animate-spin duration-3000" />{" "}
+                  Sending...
+                </p>
+              ) : (
+                <p>Submit</p>
+              )}
+            </Button>
           </div>
         </form>
       </div>

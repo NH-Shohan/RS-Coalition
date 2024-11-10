@@ -1,5 +1,6 @@
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
+import 'lenis/dist/lenis.css'
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
