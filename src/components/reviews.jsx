@@ -33,8 +33,8 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className="pt-40">
-      <div className="container mx-auto max-w-7xl">
+    <div className="pt-20 md:pt-40">
+      <div className="container mx-auto max-w-7xl px-4">
         <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
           REVIEW
         </p>

@@ -28,23 +28,23 @@ export async function POST(req) {
         <h2>New Contact Form Submission</h2>
         <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse;">
           <tr>
-            <td><strong>Name:</strong></td>
+            <td><strong>Name</strong></td>
             <td>${name}</td>
           </tr>
           <tr>
-            <td><strong>Email:</strong></td>
+            <td><strong>Email</strong></td>
             <td>${email}</td>
           </tr>
           <tr>
-            <td><strong>Phone:</strong></td>
+            <td><strong>Phone</strong></td>
             <td>${phone || "Not provided"}</td>
           </tr>
           <tr>
-            <td><strong>Source:</strong></td>
+            <td><strong>Source</strong></td>
             <td>${source || "Not specified"}</td>
           </tr>
           <tr>
-            <td><strong>Budget:</strong></td>
+            <td><strong>Budget</strong></td>
             <td>${budget || "Not specified"}</td>
           </tr>
           <tr>

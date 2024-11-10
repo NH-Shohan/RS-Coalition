@@ -62,7 +62,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-7xl pt-40" id="contact">
+    <div
+      className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4"
+      id="contact"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="space-y-10">
           <div>
@@ -85,13 +88,13 @@ const ContactForm = () => {
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
               />
             </Link>
-            <Link href="#">
+            <Link target="_blank" href="https://www.facebook.com/RSCoalition">
               <FacebookLogo
                 size={32}
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
               />
             </Link>
-            <Link href="#">
+            <Link target="_blank" href={"tel:+8801973435247"}>
               <PhoneCall
                 size={32}
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
@@ -101,15 +104,15 @@ const ContactForm = () => {
 
           <div className="mb-8">
             <p className="text-neutral-500 mb-2">Address</p>
-            <h5>
+            <h4 className="leading-8">
               House-23, Road-1, Block A,
               <br />
               Aftabnagar, Dhaka
-            </h5>
+            </h4>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 mt-10 md:mt-0">
           {submitStatus.message && (
             <div
               className={`p-4 rounded ${
@@ -130,7 +133,7 @@ const ContactForm = () => {
               <input
                 name="name"
                 type="text"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="John Doe"
                 required
               />
@@ -145,7 +148,7 @@ const ContactForm = () => {
               <input
                 name="email"
                 type="email"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="johndoe@gmail.com"
                 required
               />
@@ -157,7 +160,7 @@ const ContactForm = () => {
               <input
                 name="phone"
                 type="tel"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="+8801234567890"
               />
             </div>
@@ -170,7 +173,7 @@ const ContactForm = () => {
               </label>
               <select
                 name="source"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
               >
                 <option value="">Choose any one</option>
                 <option value="Social Media">Social Media</option>
@@ -184,7 +187,7 @@ const ContactForm = () => {
               </label>
               <select
                 name="budget"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
               >
                 <option value="">Select your range</option>
                 <option value="$100 - $500">$100 - $500</option>
@@ -201,14 +204,18 @@ const ContactForm = () => {
             </label>
             <textarea
               name="message"
-              className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-2lue-500 outline-none px-0 py-3 min-h-[120px]"
+              className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 min-h-[120px]"
               placeholder="Your message here"
               required
             />
           </div>
 
           <div className="mt-8">
-            <Button type="submit" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className={"w-full md:w-fit"}
+            >
               {isSubmitting ? (
                 <p className="flex gap-2">
                   <Spinner size={24} className="animate-spin duration-3000" />{" "}

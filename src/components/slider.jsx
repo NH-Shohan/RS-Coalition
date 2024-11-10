@@ -55,8 +55,8 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="mt-40">
-      <div className="relative overflow-hidden py-5 border-y-2 border-neutral-700">
+    <div className="mt-20 md:mt-40">
+      <div className="relative overflow-hidden md:py-5 border-y-2 border-neutral-700">
         <div
           ref={leftScrollRef}
           className="flex whitespace-nowrap"
@@ -67,7 +67,7 @@ const Slider = () => {
               key={`left-${index}`}
               className="flex items-center text-neutral-700 text-[4.5rem] whitespace-nowrap"
             >
-              <h1 className="uppercase">{service}</h1>
+              <h1 className="text-2xl md:text-5xl uppercase">{service}</h1>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none mx-8">
                 ✧
               </span>
@@ -76,7 +76,7 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden py-5 border-b-2 border-neutral-700">
+      <div className="relative overflow-hidden md:py-5 border-b-2 border-neutral-700">
         <div
           ref={rightScrollRef}
           className="flex whitespace-nowrap"
@@ -87,7 +87,7 @@ const Slider = () => {
               key={`right-${index}`}
               className="flex items-center text-neutral-700 text-[4.5rem] whitespace-nowrap"
             >
-              <h1 className="uppercase">{service}</h1>
+              <h1 className="text-2xl md:text-5xl uppercase">{service}</h1>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none mx-8">
                 ✧
               </span>
