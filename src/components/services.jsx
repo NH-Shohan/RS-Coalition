@@ -16,14 +16,17 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="space-y-4 text-left col-span-2 border-l-2 border-neutral-700 px-4 md:p-7 md:px-12">
-          <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
+        <div className="space-y-4 text-left col-span-2 md:border-l-2 border-neutral-700">
+          <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none px-4 md:px-12 pt-7">
             WE OFFER
           </p>
 
-          <div className="space-y-12">
+          <div>
             {services.map((service, index) => (
-              <div key={index} className="space-y-2">
+              <div
+                key={index}
+                className="space-y-2 p-4 md:py-12 md:px-12 border-b-2 border-neutral-700"
+              >
                 <h3 className="text-neutral-300">{service.title}</h3>
                 <p className="text-neutral-500">{service.desc}</p>
               </div>

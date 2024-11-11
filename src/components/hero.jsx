@@ -188,7 +188,7 @@ const Hero = () => {
           <br className="hidden md:block" />
           From Targeted Telesales to Inspired Design
           <br className="hidden md:block" />
-          —We Make It Happen.
+          <span className="text-neutral-300">—We Make It Happen.</span>
         </h1>
       </div>
 
