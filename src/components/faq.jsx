@@ -9,10 +9,10 @@ import {
 const FAQSection = () => {
   return (
     <section className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4">
-      <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
+      <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">
         FAQ
       </p>
-      <h1 className="text-neutral-300">
+      <h1 className="text-neutral-700 dark:text-neutral-300">
         Questions Regarding The Way We Operate
       </h1>
 
@@ -26,7 +26,7 @@ const FAQSection = () => {
           <AccordionItem
             key={index}
             value={`item-${index}`}
-            className={`border-neutral-700 p-6 text-neutral-300 transition-all duration-200 ${
+            className={`border-neutral-300 dark:border-neutral-700 p-6 text-neutral-700 dark:text-neutral-400 transition-all duration-200 ${
               [0, 1, 3, 4, 6, 7].includes(index) && "border-b-2 md:border-r-2"
             }`}
           >

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Saqeb Hasan",
+    "role": "CEO",
+    "image": "/noise.png",
+    "mobileOrder": 1,
+    "social": {
+      "instagram": "https://instagram.com/saqebhasan",
+      "linkedin": "https://linkedin.com/in/saqeb-hasan",
+      "facebook": "https://facebook.com/saqebhasan"
+    }
+  },
+  {
+    "name": "Nahim Hossain Shohan",
+    "role": "Business Development & Organization",
+    "image": "/noise.png",
+    "mobileOrder": 2,
+    "social": {
+      "instagram": "https://instagram.com/nahim.shohan",
+      "linkedin": "https://linkedin.com/in/nahim-hossain-shohan",
+      "facebook": "https://facebook.com/nahim.shohan"
+    }
+  },
+  {
+    "name": "R Letter",
+    "role": "",
+    "image": "",
+    "type": "letter",
+    "letter": "r",
+    "mobileOrder": 3
+  },
+  {
+    "name": "S Letter",
+    "role": "",
+    "image": "",
+    "type": "letter",
+    "letter": "s",
+    "mobileOrder": 6
+  },
+  {
+    "name": "Wahed Reza Romel",
+    "role": "Business Development Manager",
+    "image": "/noise.png",
+    "mobileOrder": 5,
+    "social": {
+      "instagram": "https://instagram.com/wahed.romel",
+      "linkedin": "https://linkedin.com/in/wahed-reza-romel",
+      "facebook": "https://facebook.com/wahed.romel"
+    }
+  },
+  {
+    "name": "Md. Touhidul Ridoy",
+    "role": "Project Manager",
+    "image": "/noise.png",
+    "mobileOrder": 4,
+    "social": {
+      "instagram": "https://instagram.com/touhidul.ridoy",
+      "linkedin": "https://linkedin.com/in/md-touhidul-ridoy",
+      "facebook": "https://facebook.com/touhidul.ridoy"
+    }
+  },
+  {
+    "name": "Mohsina Rubaiyat Khan",
+    "role": "Operations Coordinator",
+    "image": "/noise.png",
+    "mobileOrder": 7,
+    "social": {
+      "instagram": "https://instagram.com/mohsina.khan",
+      "linkedin": "https://linkedin.com/in/mohsina-rubaiyat-khan",
+      "facebook": "https://facebook.com/mohsina.khan"
+    }
+  },
+  {
+    "name": "",
+    "role": "",
+    "image": "/noise.png",
+    "mobileOrder": 8
+  },
+  {
+    "name": "C Letter",
+    "role": "",
+    "image": "",
+    "type": "letter",
+    "letter": "c",
+    "mobileOrder": 9
+  }
+]

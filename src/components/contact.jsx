@@ -9,7 +9,7 @@ import {
 } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useState } from "react";
-import Button from "./ui/button";
+import { Button } from "./ui/button";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,6 +28,7 @@ const ContactForm = () => {
       source: formData.get("source"),
       budget: formData.get("budget"),
       message: formData.get("message"),
+      formType: "contact",
     };
 
     try {
@@ -69,10 +70,12 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="space-y-10">
           <div>
-            <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
+            <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">
               GET IN TOUCH
             </p>
-            <h1 className="text-neutral-300">Have Idea In Mind?</h1>
+            <h1 className="text-neutral-700 dark:text-neutral-300">
+              Have Idea In Mind?
+            </h1>
           </div>
 
           <div className="flex gap-4 mb-6">
@@ -104,7 +107,7 @@ const ContactForm = () => {
 
           <div className="mb-8">
             <p className="text-neutral-500 mb-2">Address</p>
-            <h4 className="leading-8">
+            <h4 className="leading-8 text-neutral-700 dark:text-neutral-300">
               House-23, Road-1, Block A,
               <br />
               Aftabnagar, Dhaka
@@ -133,7 +136,7 @@ const ContactForm = () => {
               <input
                 name="name"
                 type="text"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="John Doe"
                 required
               />
@@ -148,7 +151,7 @@ const ContactForm = () => {
               <input
                 name="email"
                 type="email"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="johndoe@gmail.com"
                 required
               />
@@ -160,7 +163,7 @@ const ContactForm = () => {
               <input
                 name="phone"
                 type="tel"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
                 placeholder="+8801234567890"
               />
             </div>
@@ -173,7 +176,7 @@ const ContactForm = () => {
               </label>
               <select
                 name="source"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
               >
                 <option value="">Choose any one</option>
                 <option value="Social Media">Social Media</option>
@@ -187,7 +190,7 @@ const ContactForm = () => {
               </label>
               <select
                 name="budget"
-                className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
               >
                 <option value="">Select your range</option>
                 <option value="$100 - $500">$100 - $500</option>
@@ -204,7 +207,7 @@ const ContactForm = () => {
             </label>
             <textarea
               name="message"
-              className="w-full bg-transparent border-b-2 border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 min-h-[120px]"
+              className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 min-h-[120px]"
               placeholder="Your message here"
               required
             />
@@ -214,7 +217,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className={"w-full md:w-fit"}
+              className={"w-full md:w-fit px-12"}
             >
               {isSubmitting ? (
                 <p className="flex gap-2">

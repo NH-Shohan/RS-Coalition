@@ -3,7 +3,7 @@
 import plansData from "@/data/plans.json";
 import { SealCheck } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import Button from "./ui/button";
+import { Button } from "./ui/button";
 
 const Plans = () => {
   const [activeTab, setActiveTab] = useState("Telesales");
@@ -22,21 +22,21 @@ const Plans = () => {
 
   return (
     <div className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4" id="plans">
-      <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none">
+      <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">
         PLANS
       </p>
-      <h1 className="text-neutral-300 text-2xl md:text-3xl">
+      <h1 className="text-neutral-300 dark:text-neutral-700 text-2xl md:text-3xl">
         Choose Your Affordable Plan
       </h1>
 
       {/* Scrollable tabs container for mobile */}
-      <div className="relative mt-10 border-y-2 border-neutral-700">
+      <div className="relative mt-10 border-y-2 border-neutral-300 dark:border-neutral-700">
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex whitespace-nowrap min-w-full">
             {tabs.map((tab) => (
               <button
                 key={tab}
-                className={`py-3 hover:text-blue-600 transition-all border-r-2 border-neutral-700 px-4 md:px-5 flex-shrink-0 ${
+                className={`py-3 hover:text-blue-600 transition-all border-r-2 border-neutral-300 dark:border-neutral-700 px-4 md:px-5 flex-shrink-0 ${
                   activeTab === tab
                     ? "bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none"
                     : "text-neutral-500"
@@ -55,9 +55,9 @@ const Plans = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`md:p-6 md:border-r-2 border-neutral-700 ${
+            className={`md:p-6 md:border-r-2 border-neutral-300 dark:border-neutral-700 ${
               index === 2 && "md:border-r-0 md:border-opacity-0"
-            } bg-neutral-900/30 rounded-lg md:rounded-none`}
+            }`}
           >
             <span className="bg-neutral-600 text-white py-1 px-3 rounded-full uppercase text-xs">
               {plan.type}
@@ -76,7 +76,7 @@ const Plans = () => {
               </h2>
             )}
 
-            <div className="border-t-2 border-neutral-700 mt-4 pt-4">
+            <div className="border-t-2 border-neutral-300 dark:border-neutral-700 mt-4 pt-4">
               <p className="font-semibold text-neutral-400 text-base">
                 Why should you take this
               </p>

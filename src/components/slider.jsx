@@ -56,7 +56,7 @@ const Slider = () => {
 
   return (
     <div className="mt-20 md:mt-40">
-      <div className="relative overflow-hidden md:py-5 border-y-2 border-neutral-700">
+      <div className="relative overflow-hidden md:py-5 border-y-2 border-neutral-300 dark:border-neutral-700">
         <div
           ref={leftScrollRef}
           className="flex whitespace-nowrap"
@@ -76,7 +76,7 @@ const Slider = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden md:py-5 border-b-2 border-neutral-700">
+      <div className="relative overflow-hidden md:py-5 border-b-2 border-neutral-300 dark:border-neutral-700">
         <div
           ref={rightScrollRef}
           className="flex whitespace-nowrap"

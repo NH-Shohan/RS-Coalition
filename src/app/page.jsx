@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact";
 import FAQSection from "@/components/faq";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import Plans from "@/components/plans";
+import PlansTelesales from "@/components/plansTelesales";
 import Reviews from "@/components/reviews";
 import Services from "@/components/services";
 import Slider from "@/components/slider";
@@ -36,7 +36,8 @@ export default function Home() {
       <Hero />
       <Slider />
       <Services />
-      <Plans />
+      <PlansTelesales />
+      {/* <Plans /> */}
       <TeamSection />
       <FAQSection />
       <Reviews />
@@ -44,7 +45,7 @@ export default function Home() {
       <Image
         src={collaborate}
         alt="collaborate"
-        className="px-4 w-full mt-16 pointer-events-none"
+        className="px-4 w-full mt-16 pointer-events-none invert dark:invert-0"
       />
     </div>
   );
