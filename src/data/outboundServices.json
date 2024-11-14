@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Business Call Screening Services",
+    "description": "Improve productivity with SAS’s Business Call Screening Services. Customized scripting ensures only important calls reach you, screening out telemarketers and other distractions.",
+    "Icon": "PhoneIncoming"
+  },
+  {
+    "title": "24/7 Customer Service Outsourcing",
+    "description": "Enhance customer satisfaction with our 24/7 Customer Service Outsourcing. SAS provides friendly, round-the-clock support to ensure every customer receives excellent service, no matter the time.",
+    "Icon": "Clock"
+  },
+  {
+    "title": "Direct Response Call Center",
+    "description": "Trust SAS’s Direct Response Call Center to handle the demands of direct response campaigns, reducing hold times and maximizing customer engagement to achieve the highest ROI.",
+    "Icon": "Headset"
+  },
+  {
+    "title": "Order Processing Services",
+    "description": "Ensure secure and efficient order handling with our PCI-compliant Order Processing Services. SAS agents answer product questions, process payments, and protect customer information.",
+    "Icon": "CreditCard"
+  },
+  {
+    "title": "Help Desk Call Center Services",
+    "description": "Support customers with SAS’s Help Desk Call Center Services. We assist with FAQs, troubleshoot issues, and escalate complex cases to your in-house Tier 2 team when needed.",
+    "Icon": "Question"
+  },
+  {
+    "title": "Email Response Services",
+    "description": "Reduce the time spent on emails with SAS’s Email Response Services, handling specific types of emails and following escalation procedures to keep your inbox organized.",
+    "Icon": "EnvelopeSimple"
+  },
+  {
+    "title": "Emergency Call Center",
+    "description": "Rely on SAS’s Emergency Call Center for urgent situations. Our agents screen calls, identifying true emergencies and following on-call protocols for industries like healthcare and HVAC.",
+    "Icon": "Heartbeat"
+  },
+  {
+    "title": "Seminar, Conference, & Event Registration Services",
+    "description": "Simplify event planning with SAS’s Conference Registration Services. Our agents handle registration calls, answer questions, confirm reservations, and process payments.",
+    "Icon": "CalendarCheck"
+  },
+  {
+    "title": "Live Chat Outsourcing",
+    "description": "Engage customers with SAS’s Live Chat Outsourcing. Our agents provide quick responses, answer questions, create support tickets, and schedule appointments, adapting to your customers’ needs.",
+    "Icon": "ChatText"
+  },
+  {
+    "title": "Why Choose Specialty Answering Service?",
+    "description": "Specialty Answering Service is a trusted, 24/7 call center provider with customizable solutions. Our commitment to quality service, technology, and customer satisfaction sets us apart as a partner for your business.",
+    "Icon": "Star"
+  }
+]

@@ -15,8 +15,8 @@ import { ModeToggle } from "./modeToggle";
 
 // Navigation Links Data
 const NAV_LINKS = [
-  { href: "#inbound", label: "Inbound" },
-  { href: "#outbound", label: "Outbound" },
+  { href: "#inboundServices", label: "Inbound" },
+  { href: "#outboundServices", label: "Outbound" },
   { href: "#services", label: "Services" },
   { href: "#plans", label: "Pricing" },
   { href: "#contact", label: "Contact" },
@@ -31,12 +31,12 @@ const SOCIAL_LINKS = [
   },
   {
     Icon: LinkedinLogo,
-    href: "#",
+    href: "https://www.linkedin.com/company/rscoalition",
     ariaLabel: "Connect with us on LinkedIn",
   },
   {
     Icon: FacebookLogo,
-    href: "#",
+    href: "https://www.facebook.com/RSCoalition",
     ariaLabel: "Follow us on Facebook",
   },
 ];
@@ -45,7 +45,7 @@ const SOCIAL_LINKS = [
 const SocialIcons = () => (
   <div className="flex gap-4">
     {SOCIAL_LINKS.map(({ Icon, href, ariaLabel }) => (
-      <Link key={ariaLabel} href={href} aria-label={ariaLabel}>
+      <Link target="_blank" key={ariaLabel} href={href} aria-label={ariaLabel}>
         <Icon
           size={24}
           className="text-neutral-500 cursor-pointer hover:text-blue-600 transition-all"
@@ -106,7 +106,9 @@ const Navbar = () => {
         {/* Main navbar */}
         <div className="flex justify-between items-center border-y-2 px-4 md:px-0 border-neutral-300 dark:border-neutral-700 h-[52px]">
           <div className="w-[250px]">
-            <Image src={rs_logo} alt="RS Coalition" width={40} height={40} />
+            <Link href={"#"}>
+              <Image src={rs_logo} alt="RS Coalition" width={40} height={40} />
+            </Link>
           </div>
 
           {/* Desktop Menu */}

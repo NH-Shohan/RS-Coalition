@@ -60,12 +60,15 @@ const TeamSection = () => {
             alt={member.name}
             width={200}
             height={350}
-            className="w-full aspect-square rounded-2xl overflow-hidden"
+            className="w-full aspect-square rounded-2xl overflow-hidden  dark:invert invert-0"
           />
           {member.name && (
             <div className="absolute bottom-0 pb-6 pt-10 text-center w-full space-y-2 bg-gradient-to-b from-neutral-950/0 to-neutral-950/70 overflow-hidden rounded-2xl">
               <h4 className="text-neutral-200">{member.name}</h4>
               <p className="text-sm text-neutral-300">{member.role}</p>
+              {index === 1 && (
+                <p className="text-xs text-neutral-300">Software Developer</p>
+              )}
               {member.social && (
                 <div className="flex gap-4 justify-center">
                   <Link

@@ -1,34 +1,118 @@
 import services from "@/data/services.json";
+import {
+  AppWindow,
+  Code,
+  DeviceMobile,
+  Globe,
+  PaintBrush,
+} from "@phosphor-icons/react";
+import { useScroll } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import service1 from "../../public/service.jpg";
+import service2 from "../../public/service2.jpg";
+import service3 from "../../public/service3.jpg";
+
+const ICON_MAP = {
+  PaintBrush: PaintBrush,
+  DeviceMobile: DeviceMobile,
+  Globe: Globe,
+  Code: Code,
+  AppWindow: AppWindow,
+};
 
 const Services = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const [currentImage, setCurrentImage] = useState(1);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (value) => {
+      if (value < 0.4) {
+        setCurrentImage(1);
+      } else if (value < 0.7) {
+        setCurrentImage(2);
+      } else {
+        setCurrentImage(3);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
+  const renderIcon = (iconName) => {
+    const IconComponent = ICON_MAP[iconName];
+    return IconComponent ? (
+      <IconComponent size={56} weight="thin" className="text-neutral-500" />
+    ) : null;
+  };
+
   return (
-    <div className="pt-20 md:pt-40" id="services">
-      <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 border-t-2 border-neutral-300 dark:border-neutral-700 h-full">
-        <div className="space-y-4 text-left md:text-right col-span-1 p-4 md:p-7 md:sticky top-[104px] md:h-screen">
-          <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">
-            SERVICES
-          </p>
-          <div className="space-y-2">
-            <h1 className="text-neutral-700 dark:text-neutral-300">
-              What We <br /> Offer
-            </h1>
-            <p className="text-neutral-500">We help your business grow</p>
+    <div ref={containerRef} className="pt-20 md:pt-40 relative" id="services">
+      <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 border-t-2 border-neutral-300 dark:border-neutral-700">
+        <div className="col-span-1 md:relative">
+          <div className="space-y-4 text-left md:text-right p-4 md:p-7 md:sticky md:top-[104px]">
+            <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold uppercase">
+              other SERVICES
+            </p>
+            <div className="space-y-2">
+              <h1 className="text-neutral-700 dark:text-neutral-300">
+                What We <br /> Offer
+              </h1>
+              <p className="text-neutral-500">We help your business grow</p>
+            </div>
+
+            <div className="relative h-[500px] w-full hidden md:block">
+              {currentImage === 1 && (
+                <div className="absolute inset-0 animate-fastFade">
+                  <Image
+                    src={service1}
+                    alt="service Image 1"
+                    className="object-cover rounded-2xl"
+                    fill
+                  />
+                </div>
+              )}
+              {currentImage === 2 && (
+                <div className="absolute inset-0 animate-fastFade">
+                  <Image
+                    src={service2}
+                    alt="service Image 2"
+                    className="object-cover rounded-2xl"
+                    fill
+                  />
+                </div>
+              )}
+              {currentImage === 3 && (
+                <div className="absolute inset-0 animate-fastFade">
+                  <Image
+                    src={service3}
+                    alt="service Image 3"
+                    className="object-cover rounded-2xl"
+                    fill
+                  />
+                </div>
+              )}
+            </div>
+            {/* Original image for mobile */}
+            <div className="md:hidden">
+              <Image src={service1} alt="service Image" />
+            </div>
           </div>
         </div>
 
         <div className="space-y-4 text-left col-span-2 md:border-l-2 border-neutral-300 dark:border-neutral-700">
-          <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none px-4 md:px-12 pt-7 font-bold">
-            WE OFFER
-          </p>
-
           <div>
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`space-y-2 p-4 md:py-12 md:px-12 border-b-2 border-neutral-300 dark:border-neutral-700 ${
-                  index === 0 && "md:pt-0"
-                }`}
+                className={`space-y-4 p-4 md:py-12 md:px-12 border-b-2 hover:bg-neutral-300/20 dark:hover:bg-neutral-800/20 transition-all border-neutral-300 dark:border-neutral-700`}
               >
+                <div>{renderIcon(service.Icon)}</div>
                 <h3 className="text-neutral-700 dark:text-neutral-300">
                   {service.title}
                 </h3>

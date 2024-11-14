@@ -3,7 +3,9 @@
 import ContactForm from "@/components/contact";
 import FAQSection from "@/components/faq";
 import Hero from "@/components/hero";
+import InboundServices from "@/components/inboundService";
 import Navbar from "@/components/navbar";
+import OutboundServices from "@/components/outboundService";
 import PlansTelesales from "@/components/plansTelesales";
 import Reviews from "@/components/reviews";
 import Services from "@/components/services";
@@ -35,6 +37,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Slider />
+      <InboundServices />
+      <OutboundServices />
       <Services />
       <PlansTelesales />
       {/* <Plans /> */}

@@ -4,10 +4,13 @@ import { useEffect, useRef } from "react";
 
 const services = [
   "Telesales",
+  "Inbound Call",
+  "Outbound Call",
+  "Customer Service",
   "UI/UX DESIGN",
-  "APP DESIGN",
+  "Client Engagement",
   "App Development",
-  "Website Design",
+  "B2B Sales",
   "Web Development",
 ];
 
