@@ -67,7 +67,10 @@ const PlansTelesales = () => {
   };
 
   return (
-    <div className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4" id="plans">
+    <div
+      className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4"
+      id="pricing"
+    >
       <div>
         <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">
           PLANS
@@ -230,7 +233,7 @@ const PlansTelesales = () => {
                       className="w-full md:w-fit px-12"
                     >
                       {isSubmitting ? (
-                        <p className="flex gap-2">
+                        <p className="flex gap-2 items-center">
                           <Spinner
                             size={24}
                             className="animate-spin duration-3000"

@@ -61,12 +61,8 @@ const InboundServices = () => {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="pt-20 md:pt-40 relative"
-      id="inboundServices"
-    >
-      <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 border-t-2 border-neutral-300 dark:border-neutral-700">
+    <div ref={containerRef} className="pt-20 md:pt-40 relative" id="inbound">
+      <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 md:gap-6 border-t-2 border-neutral-300 dark:border-neutral-700">
         <div className="col-span-1 md:relative">
           <div className="space-y-4 text-left md:text-right p-4 md:p-7 md:sticky md:top-[104px]">
             <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold uppercase">
@@ -113,10 +109,11 @@ const InboundServices = () => {
               )}
             </div>
             {/* Original image for mobile */}
-            <div className="md:hidden">
+            <div className="relative h-[500px] w-full md:hidden overflow-hidden">
               <Image
                 src={"https://i.ibb.co.com/0BW6n3G/inbound.jpg"}
                 alt="Inbound Image"
+                className="object-cover rounded-2xl"
                 fill
               />
             </div>

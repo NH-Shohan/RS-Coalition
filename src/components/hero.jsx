@@ -2,20 +2,27 @@
 import {
   BellRinging,
   Code,
+  Database,
+  DeviceMobile,
+  Devices,
+  FigmaLogo,
   Headset,
+  OpenAiLogo,
   PhoneIncoming,
   PhoneOutgoing,
-  PhoneX,
+  TerminalWindow,
 } from "@phosphor-icons/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import rs_coalition from "../../public/rs-coalition.svg";
 import Intro from "./intro";
 import { Button } from "./ui/button";
 
 const Hero = () => {
+  const pathname = usePathname();
   const { scrollY } = useScroll();
   const [dimensions, setDimensions] = useState({
     width: 0,
@@ -108,42 +115,42 @@ const Hero = () => {
 
   const elements = [
     {
-      Icon: PhoneIncoming,
+      Icon: !pathname.includes("/services") ? PhoneIncoming : FigmaLogo,
       initialPos: "top-1/2 left-[12%]",
       x: leftX1,
       y: y1,
       rotate: rotate1,
     },
     {
-      Icon: PhoneOutgoing,
+      Icon: !pathname.includes("/services") ? PhoneOutgoing : Database,
       initialPos: "top-1/2 right-[12%]",
       x: rightX1,
       y: y1,
       rotate: rotate2,
     },
     {
-      Icon: PhoneX,
+      Icon: Devices,
       initialPos: "top-[40%] right-[17%]",
       x: rightX2,
       y: y2,
       rotate: rotate3,
     },
     {
-      Icon: Code,
+      Icon: !pathname.includes("/services") ? DeviceMobile : Code,
       initialPos: "top-[40%] left-[17%]",
       x: leftX2,
       y: y2,
       rotate: rotate4,
     },
     {
-      Icon: BellRinging,
+      Icon: !pathname.includes("/services") ? BellRinging : OpenAiLogo,
       initialPos: "top-[45%] left-[26%]",
       x: leftX3,
       y: y3,
       rotate: rotate1,
     },
     {
-      Icon: Headset,
+      Icon: !pathname.includes("/services") ? Headset : TerminalWindow,
       initialPos: "top-[45%] right-[26%]",
       x: rightX3,
       y: y3,
@@ -206,24 +213,41 @@ const Hero = () => {
         </>
       )}
 
-      <div className="container mx-auto max-w-7xl text-center text-neutral-500 pointer-events-none mt-10 md:mt-60 space-y-2">
-        <h4 className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text font-bold">
-          Engage. Convert. Grow.
-        </h4>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl px-4">
-          Crafting Connections, Captivating Designs, Closing Deals
-          <br className="hidden md:block" />
-          From Targeted Telesales to Inspired Design
-          <br className="hidden md:block" />
-          <span className="text-neutral-900 dark:text-neutral-300">
-            —We Make It Happen.
-          </span>
-        </h1>
-      </div>
+      {!pathname.includes("/services") ? (
+        <div className="container mx-auto max-w-7xl text-center text-neutral-500 pointer-events-none mt-10 md:mt-60 space-y-2">
+          <h4 className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text font-medium">
+            Engage. Convert. Grow.
+          </h4>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl px-4">
+            Crafting Connections, Captivating Designs, Closing Deals
+            <br className="hidden md:block" />
+            From Targeted Telesales to Inspired Design
+            <br className="hidden md:block" />
+            <span className="text-neutral-900 dark:text-neutral-300">
+              —We Make It Happen.
+            </span>
+          </h1>
+        </div>
+      ) : (
+        <div className="container mx-auto max-w-7xl text-center text-neutral-500 pointer-events-none mt-10 md:mt-60 space-y-2">
+          <h4 className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text font-medium">
+            Design. Develop. Deliver.
+          </h4>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl px-4">
+            Shaping Exceptional User Experiences,
+            <br className="hidden md:block" />
+            Crafting Interfaces That Inspire and Engage
+            <br className="hidden md:block" />
+            <span className="text-neutral-900 dark:text-neutral-300">
+              —We Bring Your Vision to Life.
+            </span>
+          </h1>
+        </div>
+      )}
 
       <div className="container mx-auto max-w-7xl flex flex-col items-center mt-6 px-4">
         <Button className="px-12 h-14 font-bold text-xl">
-          <Link href={"#plans"}>Start Project</Link>
+          <Link href={"#pricing"}>Start Project</Link>
         </Button>
         <Image
           src={"https://i.ibb.co.com/QFZrKkq/arrow-white.png"}
@@ -263,7 +287,13 @@ const Hero = () => {
           </motion.div>
         ))}
 
-      <Intro />
+      <Intro
+        src={`${
+          !pathname.includes("/services")
+            ? "https://i.ibb.co.com/KzBkjMd/hero.jpg"
+            : "https://i.ibb.co.com/pyvhZRx/development.jpg"
+        }`}
+      />
     </div>
   );
 };

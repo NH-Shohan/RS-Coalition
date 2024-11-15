@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 const services = [
@@ -14,9 +15,23 @@ const services = [
   "Web Development",
 ];
 
+const servicesOthers = [
+  "UI/UX DESIGN",
+  "Web Design",
+  "App Development",
+  "Product Design",
+  "Web Development",
+  "Re Branding",
+];
+
 const Slider = () => {
   const leftScrollRef = useRef(null);
   const rightScrollRef = useRef(null);
+  const pathname = usePathname();
+
+  const servicesToShow = pathname.includes("/services")
+    ? servicesOthers
+    : services;
 
   useEffect(() => {
     let leftScrollPosition = 0;
@@ -65,12 +80,14 @@ const Slider = () => {
           className="flex whitespace-nowrap"
           style={{ display: "flex", overflow: "hidden" }}
         >
-          {[...services, ...services].map((service, index) => (
+          {[...servicesToShow, ...servicesToShow].map((service, index) => (
             <div
               key={`left-${index}`}
               className="flex items-center text-neutral-700 text-[4.5rem] whitespace-nowrap"
             >
-              <h1 className="text-2xl md:text-5xl uppercase">{service}</h1>
+              <h1 className="text-2xl md:text-5xl uppercase text-neutral-700">
+                {service}
+              </h1>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none mx-8">
                 ✧
               </span>
@@ -85,12 +102,14 @@ const Slider = () => {
           className="flex whitespace-nowrap"
           style={{ display: "flex", overflow: "hidden" }}
         >
-          {[...services, ...services].map((service, index) => (
+          {[...servicesToShow, ...servicesToShow].map((service, index) => (
             <div
               key={`right-${index}`}
-              className="flex items-center text-neutral-700 text-[4.5rem] whitespace-nowrap"
+              className="flex items-center text-neutral-700 dark:text-neutral-300 text-[4.5rem] whitespace-nowrap"
             >
-              <h1 className="text-2xl md:text-5xl uppercase">{service}</h1>
+              <h1 className="text-2xl md:text-5xl uppercase text-neutral-700">
+                {service}
+              </h1>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none mx-8">
                 ✧
               </span>

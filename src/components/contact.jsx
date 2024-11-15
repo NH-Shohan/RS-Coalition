@@ -2,7 +2,6 @@
 
 import {
   FacebookLogo,
-  InstagramLogo,
   LinkedinLogo,
   PhoneCall,
   Spinner,
@@ -79,13 +78,16 @@ const ContactForm = () => {
           </div>
 
           <div className="flex gap-4 mb-6">
-            <Link href="#">
+            {/* <Link target="_blank" href={"#"}>
               <InstagramLogo
                 size={32}
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
               />
-            </Link>
-            <Link href="#">
+            </Link> */}
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/rscoalition"
+            >
               <LinkedinLogo
                 size={32}
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
@@ -97,7 +99,7 @@ const ContactForm = () => {
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
               />
             </Link>
-            <Link target="_blank" href={"tel:+8801973435247"}>
+            <Link target="_blank" href="tel:+8801973435247">
               <PhoneCall
                 size={32}
                 className="text-blue-500 cursor-pointer hover:text-blue-600 transition-all"
@@ -113,6 +115,17 @@ const ContactForm = () => {
               Aftabnagar, Dhaka
             </h4>
           </div>
+
+          <p className="text-neutral-500 mb-2">
+            © Copyright {new Date().getFullYear()},{" "}
+            <Link
+              target="_blank"
+              href={"https://github.com/NH-Shohan/"}
+              className="text-neutral-400 dark:text-neutral-700 font-semibold underline"
+            >
+              Developer
+            </Link>
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 mt-10 md:mt-0">

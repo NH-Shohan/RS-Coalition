@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import "lenis/dist/lenis.css";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

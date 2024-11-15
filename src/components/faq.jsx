@@ -1,4 +1,3 @@
-import faqData from "@/data/faqData.json";
 import {
   Accordion,
   AccordionContent,
@@ -6,7 +5,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 
-const FAQSection = () => {
+const FAQSection = ({ faqData }) => {
   return (
     <section className="container mx-auto max-w-7xl pt-20 md:pt-40 px-4">
       <p className="text-lg bg-gradient-to-b from-blue-500 to-purple-600 inline-block text-transparent bg-clip-text leading-none font-bold">

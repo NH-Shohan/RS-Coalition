@@ -3,21 +3,19 @@
 import ContactForm from "@/components/contact";
 import FAQSection from "@/components/faq";
 import Hero from "@/components/hero";
-import InboundServices from "@/components/inboundService";
-import OutboundServices from "@/components/outboundService";
-import PlansTelesales from "@/components/plansTelesales";
+import Plans from "@/components/plans";
 import Reviews from "@/components/reviews";
 import Services from "@/components/services";
 import Slider from "@/components/slider";
 import TeamSection from "@/components/team";
-import faqData from "@/data/faqData.json";
-import reviews from "@/data/reviews.json";
+import faqData from "@/data/otherFAQ.json";
+import reviews from "@/data/otherReviews.json";
 import Lenis from "lenis";
 import Image from "next/image";
 import { useEffect } from "react";
-import collaborate from "../../public/collaborate.svg";
+import collaborate from "../../../public/collaborate.svg";
 
-export default function Home() {
+const ServicesPage = () => {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -34,13 +32,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div>
       <Hero />
       <Slider />
-      <InboundServices />
-      <OutboundServices />
       <Services />
-      <PlansTelesales />
+      <Plans />
       <TeamSection />
       <FAQSection faqData={faqData} />
       <Reviews reviews={reviews} />
@@ -52,4 +48,6 @@ export default function Home() {
       />
     </div>
   );
-}
+};
+
+export default ServicesPage;

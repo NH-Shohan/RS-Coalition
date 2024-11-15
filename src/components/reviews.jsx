@@ -1,10 +1,9 @@
 "use client";
 
-import reviews from "@/data/reviews.json";
 import { Star } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 
-const Reviews = () => {
+const Reviews = ({reviews}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const scrollRef = useRef(null);
 
