@@ -11,8 +11,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import arrow_black from "../../public/arrow_black.png";
-import arrow_white from "../../public/arrow_white.png";
 import rs_coalition from "../../public/rs-coalition.svg";
 import Intro from "./intro";
 import { Button } from "./ui/button";
@@ -228,14 +226,18 @@ const Hero = () => {
           <Link href={"#plans"}>Start Project</Link>
         </Button>
         <Image
-          src={arrow_white}
+          src={"https://i.ibb.co.com/QFZrKkq/arrow-white.png"}
           alt="Arrow Image"
+          width={64}
+          height={64}
           className="w-16 h-16 md:w-20 md:h-20 rotate-45 opacity-30 mt-4 pointer-events-none hidden dark:block"
           id="about"
         />
         <Image
-          src={arrow_black}
+          src={"https://i.ibb.co.com/pPrjzzm/arrow-black.png"}
           alt="Arrow Image"
+          width={64}
+          height={64}
           className="w-16 h-16 md:w-20 md:h-20 rotate-45 opacity-30 mt-4 pointer-events-none block dark:hidden"
           id="about"
         />

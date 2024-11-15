@@ -9,9 +9,6 @@ import {
 import { useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import service1 from "../../public/service.jpg";
-import service2 from "../../public/service2.jpg";
-import service3 from "../../public/service3.jpg";
 
 const ICON_MAP = {
   PaintBrush: PaintBrush,
@@ -32,9 +29,9 @@ const Services = () => {
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (value) => {
-      if (value < 0.4) {
+      if (value < 1 / 3) {
         setCurrentImage(1);
-      } else if (value < 0.7) {
+      } else if (value < 2 / 3) {
         setCurrentImage(2);
       } else {
         setCurrentImage(3);
@@ -70,7 +67,7 @@ const Services = () => {
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={service1}
+                    src={"https://i.ibb.co.com/yRTD7Q0/service.jpg"}
                     alt="service Image 1"
                     className="object-cover rounded-2xl"
                     fill
@@ -80,7 +77,7 @@ const Services = () => {
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={service2}
+                    src={"https://i.ibb.co.com/6rVKK64/service2.jpg"}
                     alt="service Image 2"
                     className="object-cover rounded-2xl"
                     fill
@@ -90,7 +87,7 @@ const Services = () => {
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={service3}
+                    src={"https://i.ibb.co.com/xFD8jr6/service3.jpg"}
                     alt="service Image 3"
                     className="object-cover rounded-2xl"
                     fill
@@ -100,7 +97,11 @@ const Services = () => {
             </div>
             {/* Original image for mobile */}
             <div className="md:hidden">
-              <Image src={service1} alt="service Image" />
+              <Image
+                src={"https://i.ibb.co.com/yRTD7Q0/service.jpg"}
+                alt="service Image"
+                fill
+              />
             </div>
           </div>
         </div>

@@ -12,16 +12,31 @@
   {
     "name": "Alexis",
     "role": "Director of Strategy",
-    "review": "It's always great working with you guys. He goes above and beyond to meet my projects needs and dead lines."
+    "review": "It's always great working with you guys. He goes above and beyond to meet my projects needs and deadlines."
   },
   {
     "name": "Carl Talley",
     "role": "Chief Operations Officer (COO)",
-    "review": "I loved working with thim. Super easy communication, they really understood what I needed, and delivered it faster than expected. Plus, the quality is fantastic."
+    "review": "I loved working with them. Super easy communication, they really understood what I needed, and delivered it faster than expected. Plus, the quality is fantastic."
   },
   {
     "name": "Altheides",
     "role": "Senior Product Manager",
     "review": "Their understanding of layout and UI elements was spot-on. Highly recommend!"
+  },
+  {
+    "name": "Grace Lee",
+    "role": "Customer Experience Director",
+    "review": "Their telesales team exceeded our expectations. They helped us connect with customers effectively and increased our engagement rates significantly. Highly recommend their services!"
+  },
+  {
+    "name": "Robert Chen",
+    "role": "Head of Sales",
+    "review": "The telesales support we received was exceptional. Their team quickly understood our product and brand, making each call productive and professional. We saw a clear increase in leads thanks to their expertise."
+  },
+  {
+    "name": "Sophia Gomez",
+    "role": "Small Business Owner",
+    "review": "Amazing telesales service! They handled customer inquiries and follow-ups seamlessly, allowing me to focus on growing my business without worrying about missing opportunities."
   }
 ]

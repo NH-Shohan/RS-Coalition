@@ -16,9 +16,6 @@ import {
 import { useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import inbound1 from "../../public/inbound.jpg";
-import inbound2 from "../../public/inbound2.jpg";
-import inbound3 from "../../public/inbound3.jpg";
 
 const ICON_MAP = {
   PhoneIncoming: PhoneIncoming,
@@ -87,7 +84,7 @@ const InboundServices = () => {
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={inbound1}
+                    src={"https://i.ibb.co.com/0BW6n3G/inbound.jpg"}
                     alt="Inbound Image 1"
                     className="object-cover rounded-2xl"
                     fill
@@ -97,7 +94,7 @@ const InboundServices = () => {
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={inbound2}
+                    src={"https://i.ibb.co.com/6N61338/inbound2.jpg"}
                     alt="Inbound Image 2"
                     className="object-cover rounded-2xl"
                     fill
@@ -107,7 +104,7 @@ const InboundServices = () => {
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={inbound3}
+                    src={"https://i.ibb.co.com/9c1QyQF/inbound3.jpg"}
                     alt="Inbound Image 3"
                     className="object-cover rounded-2xl"
                     fill
@@ -117,7 +114,11 @@ const InboundServices = () => {
             </div>
             {/* Original image for mobile */}
             <div className="md:hidden">
-              <Image src={inbound1} alt="Inbound Image" />
+              <Image
+                src={"https://i.ibb.co.com/0BW6n3G/inbound.jpg"}
+                alt="Inbound Image"
+                fill
+              />
             </div>
           </div>
         </div>

@@ -27,7 +27,8 @@ const FAQSection = () => {
             key={index}
             value={`item-${index}`}
             className={`border-neutral-300 dark:border-neutral-700 p-6 text-neutral-700 dark:text-neutral-400 transition-all duration-200 ${
-              [0, 1, 3, 4, 6, 7].includes(index) && "border-b-2 md:border-r-2"
+              [0, 1, 3, 4, 6, 7, 9, 10].includes(index) &&
+              "border-b-2 md:border-r-2"
             }`}
           >
             <AccordionTrigger className="text-lg font-semibold hover:text-blue-500">

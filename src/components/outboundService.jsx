@@ -16,9 +16,6 @@ import {
 import { useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import outbound1 from "../../public/outbound.jpg";
-import outbound2 from "../../public/outbound2.jpg";
-import outbound3 from "../../public/outbound3.jpg";
 
 const ICON_MAP = {
   PhoneIncoming: PhoneIncoming,
@@ -89,7 +86,7 @@ const OutboundServices = () => {
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={outbound1}
+                    src={"https://i.ibb.co.com/hHK1D9W/outbound.jpg"}
                     alt="outbound Image 1"
                     className="object-cover rounded-2xl"
                     fill
@@ -99,7 +96,7 @@ const OutboundServices = () => {
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={outbound2}
+                    src={"https://i.ibb.co.com/7Vjzpf8/outbound2.jpg"}
                     alt="outbound Image 2"
                     className="object-cover rounded-2xl"
                     fill
@@ -109,7 +106,7 @@ const OutboundServices = () => {
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
                   <Image
-                    src={outbound3}
+                    src={"https://i.ibb.co.com/kh2tS21/outbound3.jpg"}
                     alt="outbound Image 3"
                     className="object-cover rounded-2xl"
                     fill
@@ -119,7 +116,11 @@ const OutboundServices = () => {
             </div>
             {/* Original image for mobile */}
             <div className="md:hidden">
-              <Image src={outbound1} alt="outbound Image" />
+              <Image
+                src={"https://i.ibb.co.com/hHK1D9W/outbound.jpg"}
+                alt="outbound Image"
+                fill
+              />
             </div>
           </div>
         </div>
