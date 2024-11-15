@@ -10,10 +10,10 @@ import Reviews from "@/components/reviews";
 import Services from "@/components/services";
 import Slider from "@/components/slider";
 import TeamSection from "@/components/team";
+import { TrackedImage } from "@/components/TrackedImage";
 import faqData from "@/data/faqData.json";
 import reviews from "@/data/reviews.json";
 import Lenis from "lenis";
-import Image from "next/image";
 import { useEffect } from "react";
 import collaborate from "../../public/collaborate.svg";
 
@@ -45,7 +45,7 @@ export default function Home() {
       <FAQSection faqData={faqData} />
       <Reviews reviews={reviews} />
       <ContactForm />
-      <Image
+      <TrackedImage
         src={collaborate}
         alt="collaborate"
         className="px-4 w-full mt-16 pointer-events-none invert dark:invert-0"

@@ -1,4 +1,5 @@
 "use client";
+
 import {
   BellRinging,
   Code,
@@ -13,12 +14,14 @@ import {
   TerminalWindow,
 } from "@phosphor-icons/react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import arrow_black from "../../public/arrow_black.png";
+import arrow_white from "../../public/arrow_white.png";
 import rs_coalition from "../../public/rs-coalition.svg";
 import Intro from "./intro";
+import { TrackedImage } from "./TrackedImage";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -171,7 +174,7 @@ const Hero = () => {
       {isMobile ? (
         <div className="w-full mt-32">
           <div className="container mx-auto">
-            <Image
+            <TrackedImage
               src={rs_coalition}
               alt="RS Coalition"
               className="px-4 w-full"
@@ -203,7 +206,7 @@ const Hero = () => {
 
           <div className="w-full invisible">
             <div className="container mx-auto">
-              <Image
+              <TrackedImage
                 src={rs_coalition}
                 alt="RS Coalition"
                 className="px-4 w-full"
@@ -249,21 +252,19 @@ const Hero = () => {
         <Button className="px-12 h-14 font-bold text-xl">
           <Link href={"#pricing"}>Start Project</Link>
         </Button>
-        <Image
-          src={"https://i.ibb.co.com/QFZrKkq/arrow-white.png"}
+        <TrackedImage
+          src={arrow_white}
           alt="Arrow Image"
           width={64}
           height={64}
           className="w-16 h-16 md:w-20 md:h-20 rotate-45 opacity-30 mt-4 pointer-events-none hidden dark:block"
-          id="about"
         />
-        <Image
-          src={"https://i.ibb.co.com/pPrjzzm/arrow-black.png"}
+        <TrackedImage
+          src={arrow_black}
           alt="Arrow Image"
           width={64}
           height={64}
           className="w-16 h-16 md:w-20 md:h-20 rotate-45 opacity-30 mt-4 pointer-events-none block dark:hidden"
-          id="about"
         />
       </div>
 
@@ -287,13 +288,7 @@ const Hero = () => {
           </motion.div>
         ))}
 
-      <Intro
-        src={`${
-          !pathname.includes("/services")
-            ? "https://i.ibb.co.com/KzBkjMd/hero.jpg"
-            : "https://i.ibb.co.com/pyvhZRx/development.jpg"
-        }`}
-      />
+      <Intro />
     </div>
   );
 };

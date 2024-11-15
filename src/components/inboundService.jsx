@@ -14,8 +14,11 @@ import {
   Wrench,
 } from "@phosphor-icons/react";
 import { useScroll } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import inbound from "../../public/inbound.jpg";
+import inbound2 from "../../public/inbound2.jpg";
+import inbound3 from "../../public/inbound3.jpg";
+import { TrackedImage } from "./TrackedImage";
 
 const ICON_MAP = {
   PhoneIncoming: PhoneIncoming,
@@ -79,8 +82,8 @@ const InboundServices = () => {
             <div className="relative h-[500px] w-full hidden md:block">
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/0BW6n3G/inbound.jpg"}
+                  <TrackedImage
+                    src={inbound}
                     alt="Inbound Image 1"
                     className="object-cover rounded-2xl"
                     fill
@@ -89,8 +92,8 @@ const InboundServices = () => {
               )}
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/6N61338/inbound2.jpg"}
+                  <TrackedImage
+                    src={inbound2}
                     alt="Inbound Image 2"
                     className="object-cover rounded-2xl"
                     fill
@@ -99,8 +102,8 @@ const InboundServices = () => {
               )}
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/9c1QyQF/inbound3.jpg"}
+                  <TrackedImage
+                    src={inbound3}
                     alt="Inbound Image 3"
                     className="object-cover rounded-2xl"
                     fill
@@ -110,8 +113,8 @@ const InboundServices = () => {
             </div>
             {/* Original image for mobile */}
             <div className="relative h-[500px] w-full md:hidden overflow-hidden">
-              <Image
-                src={"https://i.ibb.co.com/0BW6n3G/inbound.jpg"}
+              <TrackedImage
+                src={inbound}
                 alt="Inbound Image"
                 className="object-cover rounded-2xl"
                 fill

@@ -7,8 +7,11 @@ import {
   PaintBrush,
 } from "@phosphor-icons/react";
 import { useScroll } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import service from "../../public/service.jpg";
+import service2 from "../../public/service2.jpg";
+import service3 from "../../public/service3.jpg";
+import { TrackedImage } from "./TrackedImage";
 
 const ICON_MAP = {
   PaintBrush: PaintBrush,
@@ -66,8 +69,8 @@ const Services = () => {
             <div className="relative h-[500px] w-full hidden md:block">
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/yRTD7Q0/service.jpg"}
+                  <TrackedImage
+                    src={service}
                     alt="service Image 1"
                     className="object-cover rounded-2xl"
                     fill
@@ -76,8 +79,8 @@ const Services = () => {
               )}
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/6rVKK64/service2.jpg"}
+                  <TrackedImage
+                    src={service2}
                     alt="service Image 2"
                     className="object-cover rounded-2xl"
                     fill
@@ -86,8 +89,8 @@ const Services = () => {
               )}
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <Image
-                    src={"https://i.ibb.co.com/xFD8jr6/service3.jpg"}
+                  <TrackedImage
+                    src={service3}
                     alt="service Image 3"
                     className="object-cover rounded-2xl"
                     fill
@@ -97,8 +100,8 @@ const Services = () => {
             </div>
             {/* Original image for mobile */}
             <div className="relative h-[500px] w-full md:hidden overflow-hidden">
-              <Image
-                src={"https://i.ibb.co.com/yRTD7Q0/service.jpg"}
+              <TrackedImage
+                src={service}
                 alt="service Image"
                 className="object-cover rounded-2xl"
                 fill

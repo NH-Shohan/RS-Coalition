@@ -4,12 +4,12 @@ import {
   InstagramLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import c_letter from "../../public/C.svg";
 import r_letter from "../../public/R.svg";
 import s_letter from "../../public/S.svg";
+import { TrackedImage } from "./TrackedImage";
 
 const TeamSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +40,7 @@ const TeamSection = () => {
       style={isMobile ? { order: member.mobileOrder } : {}}
     >
       {member.type === "letter" ? (
-        <Image
+        <TrackedImage
           src={
             member.letter === "r"
               ? r_letter
@@ -55,7 +55,7 @@ const TeamSection = () => {
         />
       ) : (
         <div className="relative group overflow-hidden">
-          <Image
+          <TrackedImage
             src={member.image}
             alt={member.name}
             width={200}

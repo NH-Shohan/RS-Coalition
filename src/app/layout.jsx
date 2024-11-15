@@ -1,5 +1,7 @@
+import ClientLayout from "@/components/ClientLayout";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ImageLoadingProvider } from "@/lib/ImageLoadingContext";
 import "lenis/dist/lenis.css";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
@@ -27,17 +29,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${bricolageGrotesque.variable} ${inter.variable} bg-neutral-100 dark:bg-neutral-900 text-neutral-100 antialiased`}
       >
-        <div className="fixed -z-50 top-0 left-0 right-0 inset-0 bg-[url('/noise.png')] opacity-50 invert dark:invert-0 pointer-events-none" />
-
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <ImageLoadingProvider>
+          <ClientLayout>
+            <div className="fixed -z-50 top-0 left-0 right-0 inset-0 bg-[url('/noise.png')] opacity-50 invert dark:invert-0 pointer-events-none" />
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Navbar />
+              {children}
+            </ThemeProvider>
+          </ClientLayout>
+        </ImageLoadingProvider>
       </body>
     </html>
   );

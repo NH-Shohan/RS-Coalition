@@ -11,9 +11,9 @@ import TeamSection from "@/components/team";
 import faqData from "@/data/otherFAQ.json";
 import reviews from "@/data/otherReviews.json";
 import Lenis from "lenis";
-import Image from "next/image";
 import { useEffect } from "react";
 import collaborate from "../../../public/collaborate.svg";
+import { TrackedImage } from "@/components/TrackedImage";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -41,7 +41,7 @@ const ServicesPage = () => {
       <FAQSection faqData={faqData} />
       <Reviews reviews={reviews} />
       <ContactForm />
-      <Image
+      <TrackedImage
         src={collaborate}
         alt="collaborate"
         className="px-4 w-full mt-16 pointer-events-none invert dark:invert-0"
