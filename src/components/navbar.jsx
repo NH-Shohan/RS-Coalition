@@ -1,12 +1,12 @@
 "use client";
 
+import { OptimizedImage } from "@/lib/OptimizedImage";
 import { FacebookLogo, LinkedinLogo, List, X } from "@phosphor-icons/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import rs_logo from "../../public/RS_LOGO.svg";
 import { ModeToggle } from "./modeToggle";
-import { TrackedImage } from "./TrackedImage";
 
 // Navigation Links Data
 const NAV_LINKS = [
@@ -142,7 +142,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center border-y-2 px-4 md:px-0 border-neutral-300 dark:border-neutral-700 h-[52px]">
           <div className="w-[250px]">
             <Link href={"/"}>
-              <TrackedImage
+              <OptimizedImage
                 src={rs_logo}
                 alt="RS Coalition"
                 width={40}
@@ -212,7 +212,7 @@ const Navbar = () => {
               href={"/"}
               className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300"
             >
-              <TrackedImage
+              <OptimizedImage
                 src={rs_logo}
                 onClick={handleLinkClick}
                 alt="RS Coalition"

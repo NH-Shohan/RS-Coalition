@@ -13,7 +13,7 @@ import reviews from "@/data/otherReviews.json";
 import Lenis from "lenis";
 import { useEffect } from "react";
 import collaborate from "../../../public/collaborate.svg";
-import { TrackedImage } from "@/components/TrackedImage";
+import { OptimizedImage } from "@/lib/OptimizedImage";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -41,7 +41,7 @@ const ServicesPage = () => {
       <FAQSection faqData={faqData} />
       <Reviews reviews={reviews} />
       <ContactForm />
-      <TrackedImage
+      <OptimizedImage
         src={collaborate}
         alt="collaborate"
         className="px-4 w-full mt-16 pointer-events-none invert dark:invert-0"

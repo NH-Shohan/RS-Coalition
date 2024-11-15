@@ -1,5 +1,6 @@
 "use client";
 
+import { OptimizedImage } from "@/lib/OptimizedImage";
 import {
   BellRinging,
   Code,
@@ -21,7 +22,6 @@ import arrow_black from "../../public/arrow_black.png";
 import arrow_white from "../../public/arrow_white.png";
 import rs_coalition from "../../public/rs-coalition.svg";
 import Intro from "./intro";
-import { TrackedImage } from "./TrackedImage";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -174,7 +174,7 @@ const Hero = () => {
       {isMobile ? (
         <div className="w-full mt-32">
           <div className="container mx-auto">
-            <TrackedImage
+            <OptimizedImage
               src={rs_coalition}
               alt="RS Coalition"
               className="px-4 w-full"
@@ -206,7 +206,7 @@ const Hero = () => {
 
           <div className="w-full invisible">
             <div className="container mx-auto">
-              <TrackedImage
+              <OptimizedImage
                 src={rs_coalition}
                 alt="RS Coalition"
                 className="px-4 w-full"
@@ -252,14 +252,14 @@ const Hero = () => {
         <Button className="px-12 h-14 font-bold text-xl">
           <Link href={"#pricing"}>Start Project</Link>
         </Button>
-        <TrackedImage
+        <OptimizedImage
           src={arrow_white}
           alt="Arrow Image"
           width={64}
           height={64}
           className="w-16 h-16 md:w-20 md:h-20 rotate-45 opacity-30 mt-4 pointer-events-none hidden dark:block"
         />
-        <TrackedImage
+        <OptimizedImage
           src={arrow_black}
           alt="Arrow Image"
           width={64}

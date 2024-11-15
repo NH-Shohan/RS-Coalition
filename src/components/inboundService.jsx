@@ -18,7 +18,7 @@ import { useEffect, useRef, useState } from "react";
 import inbound from "../../public/inbound.jpg";
 import inbound2 from "../../public/inbound2.jpg";
 import inbound3 from "../../public/inbound3.jpg";
-import { TrackedImage } from "./TrackedImage";
+import { OptimizedImage } from "@/lib/OptimizedImage";
 
 const ICON_MAP = {
   PhoneIncoming: PhoneIncoming,
@@ -82,7 +82,7 @@ const InboundServices = () => {
             <div className="relative h-[500px] w-full hidden md:block">
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={inbound}
                     alt="Inbound Image 1"
                     className="object-cover rounded-2xl"
@@ -92,7 +92,7 @@ const InboundServices = () => {
               )}
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={inbound2}
                     alt="Inbound Image 2"
                     className="object-cover rounded-2xl"
@@ -102,7 +102,7 @@ const InboundServices = () => {
               )}
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={inbound3}
                     alt="Inbound Image 3"
                     className="object-cover rounded-2xl"
@@ -113,7 +113,7 @@ const InboundServices = () => {
             </div>
             {/* Original image for mobile */}
             <div className="relative h-[500px] w-full md:hidden overflow-hidden">
-              <TrackedImage
+              <OptimizedImage
                 src={inbound}
                 alt="Inbound Image"
                 className="object-cover rounded-2xl"

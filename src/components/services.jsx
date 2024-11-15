@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import service from "../../public/service.jpg";
 import service2 from "../../public/service2.jpg";
 import service3 from "../../public/service3.jpg";
-import { TrackedImage } from "./TrackedImage";
+import { OptimizedImage } from "@/lib/OptimizedImage";
 
 const ICON_MAP = {
   PaintBrush: PaintBrush,
@@ -69,7 +69,7 @@ const Services = () => {
             <div className="relative h-[500px] w-full hidden md:block">
               {currentImage === 1 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={service}
                     alt="service Image 1"
                     className="object-cover rounded-2xl"
@@ -79,7 +79,7 @@ const Services = () => {
               )}
               {currentImage === 2 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={service2}
                     alt="service Image 2"
                     className="object-cover rounded-2xl"
@@ -89,7 +89,7 @@ const Services = () => {
               )}
               {currentImage === 3 && (
                 <div className="absolute inset-0 animate-fastFade">
-                  <TrackedImage
+                  <OptimizedImage
                     src={service3}
                     alt="service Image 3"
                     className="object-cover rounded-2xl"
@@ -100,7 +100,7 @@ const Services = () => {
             </div>
             {/* Original image for mobile */}
             <div className="relative h-[500px] w-full md:hidden overflow-hidden">
-              <TrackedImage
+              <OptimizedImage
                 src={service}
                 alt="service Image"
                 className="object-cover rounded-2xl"
