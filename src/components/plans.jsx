@@ -168,7 +168,7 @@ const Plans = () => {
               </p>
 
               {plan.price && (
-                <h2 className="text-white mt-4 text-xl md:text-4xl">
+                <h2 className="text-neutral-700 dark:text-neutral-300 mt-4 text-xl md:text-4xl">
                   Tk {plan.price}
                   <span className="text-neutral-500 text-base md:text-lg">
                     /hour
@@ -233,7 +233,7 @@ const Plans = () => {
                       <input
                         name="name"
                         type="text"
-                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                         placeholder="John Doe"
                         required
                       />
@@ -247,7 +247,7 @@ const Plans = () => {
                         <input
                           name="email"
                           type="email"
-                          className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                          className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                           placeholder="johndoe@gmail.com"
                           required
                         />
@@ -276,7 +276,7 @@ const Plans = () => {
                         <input
                           name="phone"
                           type="tel"
-                          className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                          className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                           placeholder="+8801234567890"
                         />
                       </div>
@@ -288,7 +288,7 @@ const Plans = () => {
                       </label>
                       <textarea
                         name="message"
-                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 min-h-[120px]"
+                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300 min-h-[120px]"
                         placeholder="Your message here"
                         required
                       />

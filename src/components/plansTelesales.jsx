@@ -89,7 +89,7 @@ const PlansTelesales = () => {
               index === 2 && "md:border-r-0 md:border-opacity-0 border-none"
             }`}
           >
-            <span className="bg-neutral-600 text-white py-1 px-3 rounded-full uppercase text-xs">
+            <span className="bg-neutral-600 text-neutral-700 dark:text-neutral-300 py-1 px-3 rounded-full uppercase text-xs">
               {plan.type}
             </span>
             <h4 className="mt-4 text-lg md:text-xl text-neutral-700 dark:text-neutral-300">
@@ -100,7 +100,7 @@ const PlansTelesales = () => {
             </p>
 
             {plan.price && (
-              <h2 className="text-white mt-4 text-xl md:text-2xl">
+              <h2 className="mt-4 text-xl md:text-2xl">
                 Tk {plan.price}
                 <span className="text-neutral-500 text-base md:text-lg">
                   /hour
@@ -165,7 +165,7 @@ const PlansTelesales = () => {
                     <input
                       name="name"
                       type="text"
-                      className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                      className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                       placeholder="John Doe"
                       required
                     />
@@ -179,7 +179,7 @@ const PlansTelesales = () => {
                       <input
                         name="email"
                         type="email"
-                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                         placeholder="johndoe@gmail.com"
                         required
                       />
@@ -208,7 +208,7 @@ const PlansTelesales = () => {
                       <input
                         name="phone"
                         type="tel"
-                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3"
+                        className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300"
                         placeholder="+8801234567890"
                       />
                     </div>
@@ -220,7 +220,7 @@ const PlansTelesales = () => {
                     </label>
                     <textarea
                       name="message"
-                      className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 min-h-[120px]"
+                      className="w-full bg-transparent border-b-2 border-neutral-300 dark:border-neutral-700 focus:border-b-blue-500 outline-none px-0 py-3 text-neutral-700 dark:text-neutral-300 min-h-[120px]"
                       placeholder="Your message here"
                       required
                     />
