@@ -89,7 +89,7 @@ const PlansTelesales = () => {
               index === 2 && "md:border-r-0 md:border-opacity-0 border-none"
             }`}
           >
-            <span className="bg-neutral-600 text-neutral-700 dark:text-neutral-300 py-1 px-3 rounded-full uppercase text-xs">
+            <span className="bg-neutral-600 text-neutral-300 py-1 px-3 rounded-full uppercase text-xs">
               {plan.type}
             </span>
             <h4 className="mt-4 text-lg md:text-xl text-neutral-700 dark:text-neutral-300">
